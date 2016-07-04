@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@using ControllerTest2.ViewModels
+@model EmployeeListViewModel
+
+<!DOCTYPE html>
+
+@section TitleSection{
+    EmployeeView
+    }
+@section ContentBody{
+    <div>
+        @{
+            Html.RenderAction("GetAddNewLink");
+        }
+    
+        <table border="1">
+            <tr>
+                <th>Employee Name</th>
+                <th>Salary</th>
+            </tr>
+            @foreach (EmployeeViewModel emp in Model.Employees)
+                {
+                <tr>
+                    <td> @emp.EmployeeName </td>
+                    <td style="background-color:@emp.SalaryColor">@emp.Salary</td>
+                </tr>
+            }
+        </table>
+    </div>
+    }
+

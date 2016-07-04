@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+    public class Program
     {
         static public int Add(params int[] arg)
         {
@@ -17,13 +17,20 @@ namespace ConsoleApplication1
                 sum += i;
             }
             return sum;
+            
         }
         
         static void Main(string[] args)
         {
             int before = 3;
             int after = before;
-            int[] lol = new int[] { 5, 6 };
+            int[] lol = new int[] { 5, 6, 7 };
+
+            List<int> lollist = new List<int>(lol);
+
+            Console.WriteLine(Add(lol));
+            Console.WriteLine(Add(lollist.ToArray()));
+            Console.WriteLine();
 
 
             Console.WriteLine("before: {0}, after: {1}", before, after);
