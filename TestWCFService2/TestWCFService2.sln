@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFTestClient", "..\WCFTest
 		{ACB5090D-43CC-4BA6-9F82-133854287715} = {ACB5090D-43CC-4BA6-9F82-133854287715}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFTestClientTests", "WCFTestClientTests\WCFTestClientTests.csproj", "{D6434F2E-1005-42CC-B892-01CF90378434}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACB5090D-43CC-4BA6-9F82-133854287715} = {ACB5090D-43CC-4BA6-9F82-133854287715}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +29,10 @@ Global
 		{99ABE920-56A6-4C20-AACD-5E6BBE5EA555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99ABE920-56A6-4C20-AACD-5E6BBE5EA555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99ABE920-56A6-4C20-AACD-5E6BBE5EA555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6434F2E-1005-42CC-B892-01CF90378434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6434F2E-1005-42CC-B892-01CF90378434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6434F2E-1005-42CC-B892-01CF90378434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6434F2E-1005-42CC-B892-01CF90378434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

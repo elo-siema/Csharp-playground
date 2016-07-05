@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WCFTestClient.ServiceReference1;
+
 
 namespace WCFTestClient
 {
@@ -11,10 +11,13 @@ namespace WCFTestClient
     {
         static void Main(string[] args)
         {
-            Service1Client client = new Service1Client();
+            var methods = new Methods();
+
             try
             {
-                var response = client.GetData(5);
+                Console.WriteLine("Enter value");
+                int val = int.Parse(Console.ReadLine());
+                var response = methods.GetValue(val);
                 Console.WriteLine(response);
             }
             catch (Exception ex)
@@ -22,10 +25,7 @@ namespace WCFTestClient
                 Console.WriteLine(ex);
                 Console.ReadLine();
             }
-            finally
-            {
-                client.Close();
-            }
+            
             Console.ReadLine();
         }
     }

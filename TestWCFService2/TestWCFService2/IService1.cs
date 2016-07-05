@@ -19,6 +19,9 @@ namespace TestWCFService2
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        string HelloWorld();
+
         // TODO: Add your service operations here
     }
 
